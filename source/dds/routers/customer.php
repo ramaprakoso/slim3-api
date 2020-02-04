@@ -6,5 +6,8 @@
 
     $app->group('/customer', function () use ($app) {
         $app->get('/', '\DDSControllers\CustomerController:getCustomerList');
-        $app->post('/', '\DDSControllers\CustomerController:addCustomer'); 
+        $app->get('/{id}', '\DDSControllers\CustomerController:getCustomerById');
+        $app->post('/', '\DDSControllers\CustomerController:addCustomer');
+        $app->put('/{id}', '\DDSControllers\CustomerController:updateCustomer'); 
+        $app->delete('/{id}', '\DDSControllers\CustomerController:deleteCustomer');  
     }); 
