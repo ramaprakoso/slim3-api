@@ -1,0 +1,20 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+
+	# for security
+	# <Directorymatch "^/(.*/)*\.(git|svn)/">
+    #     Require all denied
+    # </Directorymatch>
+	RewriteRule \.(git|svn)(/.*)?$ - [F,NC]
+
+	# for security disable show list in folder
+	# Options -Indexes
+	# AllowOverride All
+</IfModule>

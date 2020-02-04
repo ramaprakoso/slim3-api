@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule  ^$ html/    [L]
+	RewriteRule  (.*) html/$1 [L]
+
+	# for security
+	# <Directorymatch "^/(.*/)*\.(git|svn)/">
+    #     Require all denied
+    # </Directorymatch>
+	RewriteRule \.(git|svn)(/.*)?$ - [F,NC]
+
+	# for security disable show list in folder
+	# Options -Indexes
+	# AllowOverride All
+</IfModule>

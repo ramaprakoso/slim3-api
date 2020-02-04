@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/slim": "^3.12",
+        "illuminate/database": "^5.8",
+        "ramsey/uuid": "^3.8",
+        "lcobucci/jwt": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DDSControllers\\": "dds/controllers/",
+            "DDSModels\\": "dds/models/"
+        }
+    }
+}

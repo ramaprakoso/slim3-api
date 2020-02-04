@@ -1,0 +1,36 @@
+[30-Jan-2020 13:12:32 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Illuminate\Database\Capsule\Manager::addConnection() must be of the type array, null given, called in /application/source/html/index.php on line 41 and defined in /application/source/vendor/illuminate/database/Capsule/Manager.php:118
+Stack trace:
+#0 /application/source/html/index.php(41): Illuminate\Database\Capsule\Manager->addConnection(NULL, 'test')
+#1 {main}
+  thrown in /application/source/vendor/illuminate/database/Capsule/Manager.php on line 118
+[30-Jan-2020 13:15:56 Asia/Jakarta] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /application/source/vendor/slim/slim/Slim/App.php:621
+Stack trace:
+#0 /application/source/vendor/slim/slim/Slim/App.php(317): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /application/source/html/index.php(327): Slim\App->run()
+#2 {main}
+  thrown in /application/source/vendor/slim/slim/Slim/App.php on line 621
+[30-Jan-2020 14:16:45 Asia/Jakarta] PHP Notice:  Undefined variable: request_verify in /application/source/dds/routers/sample.php on line 6
+[30-Jan-2020 14:17:04 Asia/Jakarta] PHP Notice:  Undefined variable: request_verify in /application/source/dds/routers/sample.php on line 6
+[30-Jan-2020 14:17:08 Asia/Jakarta] PHP Notice:  Undefined variable: request_verify in /application/source/dds/routers/sample.php on line 6
+[30-Jan-2020 14:18:37 Asia/Jakarta] PHP Notice:  Undefined variable: request_verify in /application/source/dds/routers/sample.php on line 6
+[30-Jan-2020 14:26:19 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /application/source/dds/routers/sample.php on line 25
+[30-Jan-2020 14:26:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /application/source/dds/routers/sample.php:19
+Stack trace:
+#0 /application/source/dds/routers.php(9): include()
+#1 /application/source/html/index.php(317): require('/application/so...')
+#2 {main}
+  thrown in /application/source/dds/routers/sample.php on line 19
+[30-Jan-2020 14:58:15 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Illuminate\Database\Capsule\Manager::addConnection() must be of the type array, null given, called in /application/source/html/index.php on line 41 and defined in /application/source/vendor/illuminate/database/Capsule/Manager.php:118
+Stack trace:
+#0 /application/source/html/index.php(41): Illuminate\Database\Capsule\Manager->addConnection(NULL, 'test')
+#1 {main}
+  thrown in /application/source/vendor/illuminate/database/Capsule/Manager.php on line 118
+[04-Feb-2020 14:18:56 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Closure::{closure}() must be an instance of RouteCollectorProxy, instance of Slim\App given, called in /application/source/vendor/slim/slim/Slim/RouteGroup.php on line 25 and defined in /application/source/dds/routers/customer.php:7
+Stack trace:
+#0 /application/source/vendor/slim/slim/Slim/RouteGroup.php(25): Closure->{closure}(Object(Slim\App))
+#1 /application/source/vendor/slim/slim/Slim/App.php(272): Slim\RouteGroup->__invoke(Object(Slim\App))
+#2 /application/source/dds/routers/customer.php(9): Slim\App->group('/customer', Object(Closure))
+#3 /application/source/dds/routers.php(9): include('/application/so...')
+#4 /application/source/html/index.php(317): require('/application/so...')
+#5 {main}
+  thrown in /application/source/dds/routers/customer.php on line 7
