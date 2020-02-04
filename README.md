@@ -1,3 +1,2 @@
-# Digius NextGen API
-
-Digital Genius Assessment Platform Next Generation
+# Slim API 3 Tutorial 
+Slim API 3 with docker
