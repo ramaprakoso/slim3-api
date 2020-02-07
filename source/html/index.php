@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 
 date_default_timezone_set('Asia/Jakarta');
 
-define('DIR_SEP', DIRECTORY_SEPARATOR);
-define('DEFAULT_PATH', dirname(__DIR__));
-define('DDS_PATH', DEFAULT_PATH . DIR_SEP . 'dds');
-define('PUBLIC_PATH', DEFAULT_PATH . DIR_SEP . 'public');
+define('DIR_SEP', DIRECTORY_SEPARATOR); // define separator '/'
+define('DEFAULT_PATH', dirname(__DIR__)); // define path  '/application/source'
+define('DDS_PATH', DEFAULT_PATH . DIR_SEP . 'dds'); // define '/application/source/dds'
+define('PUBLIC_PATH', DEFAULT_PATH . DIR_SEP . 'public'); //define public path '/application/source/public'
 
 require DEFAULT_PATH . DIR_SEP . 'vendor' . DIR_SEP . 'autoload.php';
 
@@ -17,7 +17,11 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 $app = new \Slim\App(require DDS_PATH . DIR_SEP . 'settings.php');
-
+ 
+// var_dump(DEFAULT_PATH); 
+// var_dump(PUBLIC_PATH); 
+// var_dump(DDS_PATH); 
+// exit; 
 /*
  * get true ip address request
  * ref : https://www.slimframework.com/docs/v3/cookbook/ip-address.html
@@ -41,6 +45,7 @@ $capsule->addConnection($container['settings']['db_core'], 'core');
 $capsule->addConnection($container['settings']['db_test'], 'test');
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
+
 $container['db'] = function ($container) use ($capsule) {
     return $capsule;
 };
@@ -78,17 +83,39 @@ $container['view'] = function ($container) {
 /*
  * error not found handler
 //  */
-// $container['notFoundHandler'] = function ($container) {
-//     return function (Request $request, Response $response) use ($container) {
-//         return $container['response']
-//             ->withStatus(404)
-//             ->withHeader('Content-type', 'application/json')
-//             ->write(json_encode( [
-//                 'status' => 'failed',
-//                 'message' => 'Page not found'
-//             ] ));
-//     };
-// };
+$container['notFoundHandler'] = function ($container) {
+    return function (Request $request, Response $response) use ($container) {
+        return $container['response']
+            ->withStatus(404)
+            ->withHeader('Content-type', 'application/json')
+            ->write(json_encode( [
+                'status' => 'failed',
+                'message' => 'Page not found'
+            ] ));
+    };
+};
+
+$basic_auth = function($request, $response, $next) {
+
+    $request_authorization = $_SERVER["HTTP_AUTHORIZATION"];
+
+    $auth_check = \DDSModels\CustomerModel::where('token', $request_authorization)->count();
+    
+    // var_dump($auth_check); exit; 
+
+    if($auth_check > 0){
+        $response = $next($request, $response);
+        return $response; 
+    }
+
+    $result = array(
+        "status" => false,
+        "message" => "Auth Failed ...",
+        "data" => []
+    );
+    
+    return $response->withStatus(401)->withJson($result);
+};
 
 /*
  * 405 Not Allowed Handler
@@ -149,17 +176,25 @@ $container['view'] = function ($container) {
 //     return false;
 // };
 
-// $request_verify = function (Request $request, Response $response, callable $next) use ($container) {
-//     if ($container['request_verify'] !== false) {
+// $basic_auth = function (Request $request, Response $response, callable $next) use ($container) {
+   
+//     // $check = '\DDSControllers\LoginController:postLogin'; 
+
+//     $params = $request->getQueryParams();
+//     if($check !== false){
+//         echo "true"; 
 //         $response = $next($request, $response);
 //     } else {
 //         $response->withStatus(401)->getBody()->write( json_encode( [
 //             'status' => 'failed',
 //             'message' => 'You are not authorize.',
 //         ]) );
+//         echo "false"; 
+
 //     }
 //     return $response;
 // };
+
 
 /*
 $admin_request_verify = function (Request $request, Response $response, callable $next) use ($container) {

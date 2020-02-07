@@ -60,6 +60,8 @@ class CustomerController
 
     public function getCustomerById(Request $request, Response $response, $args){
         $id = $args['id']; 
+        // $token = $request->getHeaders('Authorization'); 
+        // var_dump($token); exit; 
 
         $return = [
             'status' => 'success',
@@ -67,6 +69,7 @@ class CustomerController
         ];
 
         $datas = CustomerModel::where('customerNumber', $id)
+        ->whereNotNull('deleted_at')
         ->get();
 
         if ($datas !== null && sizeof($datas) > 0) {
@@ -84,8 +87,8 @@ class CustomerController
         $data = array(
             "customerNumber" => $customers['customerNumber'],
             "customerName" => $customers['customerName'],
-            // "contactFirstName" => $customers['contactFirstName'],
-            // "contactLastName" => $customers['contactLastName'],
+            "username" => $customers['username'],
+            "password" => $customers['password'],
             "phone" => $customers['phone'],
             "addressLine1" => $customers['addressLine1'],
             "city" => $customers['city'],
