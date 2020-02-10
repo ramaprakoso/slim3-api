@@ -106,3 +106,4 @@ Stack trace:
 [10-Feb-2020 12:07:57 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 108
 [10-Feb-2020 12:08:19 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 108
 [10-Feb-2020 12:08:21 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 108
+[10-Feb-2020 15:04:27 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 108
