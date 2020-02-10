@@ -15,17 +15,17 @@ return [
         /*
          * database setting
          */
-        'db_core' => [
-            'driver'    => 'mysql',
-            'host'      => 'slim-v3-db-server',
-            'port'      => '3306',
-            'database'  => 'dbslim',
-            'username'  => 'dbusername',
-            'password'  => 'dbP@ssw0rd',
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_sci',
-            'prefix'    => '',
-        ],
+        // 'db_core' => [
+        //     'driver'    => 'mysql',
+        //     'host'      => 'slim-v3-db-server',
+        //     'port'      => '3306',
+        //     'database'  => 'dbslim',
+        //     'username'  => 'dbusername',
+        //     'password'  => 'dbP@ssw0rd',
+        //     'charset'   => 'utf8',
+        //     'collation' => 'utf8_unicode_sci',
+        //     'prefix'    => '',
+        // ],
         'db_test' => [
             'driver'    => 'mysql',
             'host'      => 'slim-v3-db-server',

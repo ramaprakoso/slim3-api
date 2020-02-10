@@ -60,8 +60,9 @@ class CustomerController
 
     public function getCustomerById(Request $request, Response $response, $args){
         $id = $args['id']; 
-        // $token = $request->getHeaders('Authorization'); 
-        // var_dump($token); exit; 
+
+        // $params = $request->getQueryParams(); 
+        // var_dump($params); exit; 
 
         $return = [
             'status' => 'success',
@@ -69,7 +70,7 @@ class CustomerController
         ];
 
         $datas = CustomerModel::where('customerNumber', $id)
-        ->whereNotNull('deleted_at')
+        ->whereNull('deleted_at')
         ->get();
 
         if ($datas !== null && sizeof($datas) > 0) {

@@ -41,7 +41,7 @@ $container = $app->getContainer();
  * initial db connection container
  */
 $capsule = new \Illuminate\Database\Capsule\Manager;
-$capsule->addConnection($container['settings']['db_core'], 'core');
+// $capsule->addConnection($container['settings']['db_core'], 'core');
 $capsule->addConnection($container['settings']['db_test'], 'test');
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
@@ -95,14 +95,22 @@ $container['notFoundHandler'] = function ($container) {
     };
 };
 
+//basic auth test 
+// $basic_auth = function ($request, $response, $next) {
+//     $response->getBody()->write('BEFORE');
+//     $response = $next($request, $response);
+//     $response->getBody()->write('AFTER');
+//     return $response;
+// };
+
 $basic_auth = function($request, $response, $next) {
 
     $request_authorization = $_SERVER["HTTP_AUTHORIZATION"];
 
-    $auth_check = \DDSModels\CustomerModel::where('token', $request_authorization)->count();
+    $auth_check = \DDSModels\CustomerModel::where('token', $request_authorization)
+    ->whereNotNull('token')
+    ->count();
     
-    // var_dump($auth_check); exit; 
-
     if($auth_check > 0){
         $response = $next($request, $response);
         return $response; 
@@ -110,8 +118,7 @@ $basic_auth = function($request, $response, $next) {
 
     $result = array(
         "status" => false,
-        "message" => "Auth Failed ...",
-        "data" => []
+        "message" => "Auth Failed ..."
     );
     
     return $response->withStatus(401)->withJson($result);

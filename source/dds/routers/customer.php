@@ -4,6 +4,7 @@
     // $app->get('/customer/', '\DDSControllers\CustomerController:getCustomerList');
     // $app->get('/insertCustomer', '\DDSControllers\IndexController:phpinfo')->add($request_verify);
 
+    //without middleware 
     // $app->group('/customer', function () use ($app) {
     //     $app->get('/', '\DDSControllers\CustomerController:getCustomerList');
     //     $app->get('/{id:[0-9]*}', '\DDSControllers\CustomerController:getCustomerById');

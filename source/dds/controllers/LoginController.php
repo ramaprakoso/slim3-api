@@ -34,10 +34,6 @@ class LoginController
         $token = rand(); 
 
         if($user_rows !== null){
-            // $user_rows['customerNumber']; 
-
-            // var_dump($user_rows['customerNumber']);
-            // exit; 
             
             $result = array(
                 "status" => true,
