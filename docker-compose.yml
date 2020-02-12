@@ -36,3 +36,13 @@ services:
       ports:
         - "12302:3306"
 
+    redis:
+      image: 'redis:alpine'
+      container_name: redis-v3-cache
+      volumes:
+        - .:/application
+        - ./engine/redis/redis.conf:/usr/local/etc/redis/redis.conf
+      ports:
+        - "12399:6379"
+
+
