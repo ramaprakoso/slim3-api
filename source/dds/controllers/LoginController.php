@@ -8,8 +8,6 @@ use \Psr\Http\Message\ResponseInterface as Response;
 use \DDSModels\CustomerModel; 
 use \Illuminate\Database\Capsule\Manager as DB;
 use Lcobucci\JWT\Signer\Key;
-use \Illuminate\Support\Facades\Redis; 
-
 
 
 class LoginController

@@ -82,7 +82,6 @@ $basic_auth = function($request, $response, $next) {
         $publicKey = new \Lcobucci\JWT\Signer\Key('file://'. DDS_PATH . DIR_SEP . 'rsa' . DIR_SEP . 'public.rsa'); 
         
         try {
-
             $token = (new \Lcobucci\JWT\Parser())->parse((string) str_replace('Bearer' . ' ', '', $request_authorization));
 
             $verify_data = new \Lcobucci\JWT\ValidationData();
