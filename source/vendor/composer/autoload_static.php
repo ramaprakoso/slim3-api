@@ -32,6 +32,7 @@ class ComposerStaticInit757944ef4853d6aa7ed6bd0ab4b0ff70
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Predis\\' => 7,
         ),
         'L' => 
         array (
@@ -96,6 +97,10 @@ class ComposerStaticInit757944ef4853d6aa7ed6bd0ab4b0ff70
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Predis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/predis/predis/src',
         ),
         'Lcobucci\\JWT\\' => 
         array (

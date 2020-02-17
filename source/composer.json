@@ -3,7 +3,8 @@
         "slim/slim": "^3.12",
         "illuminate/database": "^5.8",
         "ramsey/uuid": "^3.8",
-        "lcobucci/jwt": "^3.3"
+        "lcobucci/jwt": "^3.3",
+        "predis/predis": "^1.1"
     },
     "autoload": {
         "psr-4": {

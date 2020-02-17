@@ -36,6 +36,17 @@ $container['db'] = function ($container) use ($capsule) {
     return $capsule;
 };
 
+$redis = new \Predis\Client(array(
+    'scheme' => $container['settings']['redis']['scheme'],
+    'host' => $container['settings']['redis']['host'],
+    'port' => $container['settings']['redis']['port']
+));
+
+$container['redis'] = function ($container) use ($redis) {
+    return $redis;
+};
+
+
 /*
  * error not found handler
 //  */
@@ -63,22 +74,40 @@ $basic_auth = function($request, $response, $next) {
 
     $request_authorization = $_SERVER["HTTP_AUTHORIZATION"];
 
-    $auth_check = \DDSModels\CustomerModel::where('token', $request_authorization)
-    ->whereNotNull('token')
-    ->count();
-    
-    if($auth_check > 0){
-        $response = $next($request, $response);
-        return $response; 
-    }
+    if (
+        strlen($request_authorization) > strlen('Bearer') &&
+        substr(strtolower($request_authorization), 0, strlen('Bearer')) == strtolower('Bearer')
+    ){
+        $signer = new \Lcobucci\JWT\Signer\Rsa\Sha256();
+        $publicKey = new \Lcobucci\JWT\Signer\Key('file://'. DDS_PATH . DIR_SEP . 'rsa' . DIR_SEP . 'public.rsa'); 
+        
+        try {
 
-    $result = array(
-        "status" => false,
-        "message" => "Auth Failed ..."
-    );
-    
-    return $response->withStatus(401)->withJson($result);
+            $token = (new \Lcobucci\JWT\Parser())->parse((string) str_replace('Bearer' . ' ', '', $request_authorization));
+
+            $verify_data = new \Lcobucci\JWT\ValidationData();
+            $verify_data->setIssuer( $container['settings']['jwt']['issuer'] );
+            $verify_data->setAudience( $container['settings']['jwt']['audience'] );
+            $verify_data->setCurrentTime(time());
+            
+            if (
+                $token->verify($signer, $publicKey) &&
+                $token->validate($verify_data)
+            ) {
+
+                //get token from redis
+                $authjwt = $this->redis->get($token->getHeader('jti'));
+                if ($authjwt !== null) {
+                    $response = $next($request, $response);
+                }
+
+            }
+            return $response; 
+        } catch (\Exception $e) { }
+    }
+    return false;
 };
+
 
 $container['utils'] = function ($container) {
     class UtilsClass {

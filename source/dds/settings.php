@@ -47,6 +47,12 @@ return [
             'expiration'    => 86400, // 3600 = 1 hour / 86400 = 1 day
         ],
 
+        'redis' => [
+            'scheme'   => 'tcp',
+            'host'     => '192.168.105.52',
+            'port'     => 12399,
+        ],
+
         /*
          * email sender
          */

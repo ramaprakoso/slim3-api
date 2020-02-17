@@ -116,3 +116,111 @@ Stack trace:
 [12-Feb-2020 23:19:16 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 42
 [12-Feb-2020 23:20:17 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 42
 [12-Feb-2020 23:20:20 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 42
+[17-Feb-2020 01:07:44 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 01:07:45 Asia/Jakarta] PHP Notice:  Undefined property: DDSControllers\LoginController::$redis in /application/source/dds/controllers/LoginController.php on line 82
+[17-Feb-2020 01:08:32 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 01:09:30 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 01:50:16 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 03:57:56 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 04:31:24 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 04:31:50 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 44
+[17-Feb-2020 05:15:38 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:15:38 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:16:27 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:16:27 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:17:06 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:17:06 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:17:51 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:17:51 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:19:42 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:19:42 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:20:10 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:20:10 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:21:43 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:21:43 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:24:52 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:24:52 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:26:50 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:26:50 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:26:53 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:26:53 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:27:29 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:27:29 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:31:09 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:31:09 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:31:31 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:31:31 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:36:51 Asia/Jakarta] PHP Warning:  strlen() expects parameter 1 to be string, array given in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
+[17-Feb-2020 05:36:51 Asia/Jakarta] PHP Notice:  Array to string conversion in /application/source/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
+[17-Feb-2020 05:41:43 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 54
+[17-Feb-2020 06:18:49 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:18:49 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 91
+[17-Feb-2020 06:19:16 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:19:16 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 91
+[17-Feb-2020 06:19:28 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:19:28 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 91
+[17-Feb-2020 06:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:20:40 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 91
+[17-Feb-2020 06:21:08 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:21:08 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 91
+[17-Feb-2020 06:25:57 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:25:57 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:26:40 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:26:40 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:28:58 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:28:58 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:31:56 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 54
+[17-Feb-2020 06:34:36 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 54
+[17-Feb-2020 06:38:03 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:38:03 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:38:28 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:38:28 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:38:34 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:38:34 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:39:39 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:39:39 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:40:48 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:40:48 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:41:36 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:41:36 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:42:11 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:42:11 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:42:38 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:42:38 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:42:57 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:42:57 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:43:28 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:43:28 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:43:43 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:43:43 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:45:20 Asia/Jakarta] PHP Notice:  Undefined offset: 0 in /application/source/dds/controllers/LoginController.php on line 27
+[17-Feb-2020 06:45:20 Asia/Jakarta] PHP Notice:  Undefined offset: 0 in /application/source/dds/controllers/LoginController.php on line 27
+[17-Feb-2020 06:45:20 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 54
+[17-Feb-2020 06:46:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:46:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:46:50 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:46:50 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:47:07 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:47:07 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:48:04 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:48:04 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:48:26 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:48:26 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:49:01 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:49:01 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:49:42 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:49:42 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:49:52 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:49:52 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:50:26 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:50:26 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:51:37 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:51:37 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:52:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:52:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:52:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:52:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:53:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:53:23 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90
+[17-Feb-2020 06:53:49 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 89
+[17-Feb-2020 06:53:49 Asia/Jakarta] PHP Notice:  Undefined variable: container in /application/source/html/index.php on line 90

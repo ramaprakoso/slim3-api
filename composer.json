@@ -1,6 +1,7 @@
 {
     "require": {
         "lcobucci/jwt": "^3.3",
-        "ramsey/uuid": "^3.9"
+        "ramsey/uuid": "^3.9",
+        "predis/predis": "^1.1"
     }
 }
