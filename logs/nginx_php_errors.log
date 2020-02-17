@@ -108,3 +108,11 @@ Stack trace:
 [10-Feb-2020 12:08:21 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 108
 [10-Feb-2020 15:04:27 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 108
 [11-Feb-2020 10:12:02 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /application/source/html/index.php on line 64
+[12-Feb-2020 16:27:51 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_CLIENT_IP in /application/source/dds/controllers/LoginController.php on line 32
+[12-Feb-2020 16:28:18 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_CLIENT_IP in /application/source/dds/controllers/LoginController.php on line 32
+[12-Feb-2020 16:28:34 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 32
+[12-Feb-2020 22:57:50 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 37
+[12-Feb-2020 23:16:15 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 37
+[12-Feb-2020 23:19:16 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 42
+[12-Feb-2020 23:20:17 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 42
+[12-Feb-2020 23:20:20 Asia/Jakarta] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /application/source/dds/controllers/LoginController.php on line 42

@@ -80,6 +80,29 @@ $basic_auth = function($request, $response, $next) {
     return $response->withStatus(401)->withJson($result);
 };
 
+$container['utils'] = function ($container) {
+    class UtilsClass {
+
+        public function __construct(\Psr\Container\ContainerInterface $container)
+        {
+            $this->container = $container;
+        }
+
+        /*
+         * generator uuid version 4
+         */
+        public function generateuuid4() {
+            try {
+                return strtolower(\Ramsey\Uuid\Uuid::uuid4()->toString());
+            } catch (\Ramsey\Uuid\Exception\UnsatisfiedDependencyException $e) {
+                return null;
+            }
+        }
+
+    }
+    return new UtilsClass($container);
+};
+
 require DDS_PATH . DIR_SEP . 'routers.php';
 
 // $app->map(['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], '/{routes:.+}', function(Request $request, Response $response) {

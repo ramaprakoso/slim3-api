@@ -17,18 +17,22 @@ class RegisterController
         $this->container = $container; 
     }
 
-    public function __invoke(Request $request, Response $response, $next)
+    public function postRegister(Request $request, Response $response, $next)
     {
-        $customers = $request->getParsedBody(); //show all request 
+        $data = $request->getParsedBody(); //show all request 
+        
+        $token = rand(); 
+
         $data = array(
-            "customerNumber" => $customers['customerNumber'],
-            "customerName" => $customers['customerName'],
-            "username" => $customers['username'],
-            "password" => $customers['password'],
-            "phone" => $customers['phone'],
-            "addressLine1" => $customers['addressLine1'],
-            "city" => $customers['city'],
-            "state" => $customers['state'],
+            "customerNumber" => $data['customerNumber'],
+            "customerName" => $data['customerName'],
+            "username" => $data['username'],
+            "password" => $data['password'],
+            "phone" => $data['phone'],
+            "addressLine1" => $data['addressLine1'],
+            "city" => $data['city'],
+            "state" => $data['state'],
+            "token" => $token,
             "created_at" => date("Y-m-d h:i:s") 
         ); 
         
