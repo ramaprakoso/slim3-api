@@ -21,8 +21,12 @@ class LoginController
 
     public function postLogin(Request $request, Response $response, $next)
     {
+        //check token 
+        $request_authorization = $_SERVER["HTTP_AUTHORIZATION"];
+        $token = (new \Lcobucci\JWT\Parser())->parse((string) str_replace('Bearer' . ' ', '', $request_authorization));
+
         $data = $request->getParsedBody(); //show all request 
-        $uuid = ($request->getHeader('jti')[0] !== "") ? $request->getHeader('jti')[0] : null; 
+        $uuid = $token->getHeader('jti'); 
         $token = ""; 
 
         $return = [
