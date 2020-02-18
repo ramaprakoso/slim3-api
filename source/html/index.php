@@ -62,14 +62,6 @@ $container['notFoundHandler'] = function ($container) {
     };
 };
 
-//basic auth test 
-// $basic_auth = function ($request, $response, $next) {
-//     $response->getBody()->write('BEFORE');
-//     $response = $next($request, $response);
-//     $response->getBody()->write('AFTER');
-//     return $response;
-// };
-
 $basic_auth = function($request, $response, $next) {
 
     $request_authorization = $_SERVER["HTTP_AUTHORIZATION"];
@@ -99,9 +91,15 @@ $basic_auth = function($request, $response, $next) {
                 if ($authjwt !== null) {
                     $response = $next($request, $response);
                 }
+                return $response; 
 
+            } else {
+                $result = array(
+                    "status" => false,
+                    "message" => "Unauthorized",
+                );
+                return $response->withStatus(401)->withJson($result);
             }
-            return $response; 
         } catch (\Exception $e) { }
     }
     return false;
